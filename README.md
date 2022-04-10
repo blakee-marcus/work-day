@@ -21,3 +21,4 @@ WHEN I refresh the page
 THEN the saved events persist  
 
 ## Mock Up
+![](https://github.com/blakee-marcus/work-day/blob/main/assets/images/mockup.gif)
