@@ -1,5 +1,13 @@
+// Get current date from Moment.js as a string
 var todayDate = moment().format('dddd, MMM Do YYYY');
+//display current date on HTML page
 $("#currentDay").text(todayDate);
+
+//updates time on page every second
+setInterval(function() {
+    $("#currentTime").text(moment().format('hh : mm'));
+}, 1000);
+
 
 
 $(function() {
@@ -13,13 +21,16 @@ $(function() {
         console.log(time);
     })
 
-    var hourCheck = function() {
-        var currentHour = moment().hour();
-        console.log(currentHour);
 
+    // checks current hour and changes time blocks color based on "past, present, future" basis
+    var hourCheck = function() {
+        // gets current hour from Moment,js as a string
+        var currentHour = moment().hour();
+        
+        //for each time block, compare hour block with current hour
         $(".time-block").each(function () {
             var hourBlock = parseInt($(this).attr("id"));
-            console.log(hourBlock);
+            
             if (hourBlock < currentHour) {
                 $(this).removeClass("present");
                 $(this).removeClass("future");
@@ -40,5 +51,17 @@ $(function() {
         
     };
     
+    $("#9 .description").val(localStorage.getItem("9"));
+    $("#10 .description").val(localStorage.getItem("10"));
+    $("#11 .description").val(localStorage.getItem("11"));
+    $("#12 .description").val(localStorage.getItem("12"));
+    $("#13 .description").val(localStorage.getItem("13"));
+    $("#14 .description").val(localStorage.getItem("14"));
+    $("#15 .description").val(localStorage.getItem("15"));
+    $("#16 .description").val(localStorage.getItem("16"));
+    $("#17 .description").val(localStorage.getItem("17"));
+    
+
+
     hourCheck();
-});
+})
