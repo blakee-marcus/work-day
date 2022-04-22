@@ -24,3 +24,7 @@ THEN the saved events persist
 The following animation demonstrates the application functionality:  
 
 ![](https://github.com/blakee-marcus/work-day/blob/main/assets/images/mockup.gif)
+
+
+## Demo
+Link to live version [here](https://blakee-marcus.github.io/work-day/)
